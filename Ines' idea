@@ -1,0 +1,12 @@
+Life factors that shape voters' decisions
+inspired by "https://www.kaggle.com/competitions/can-we-predict-voting-outcomes/overview"
+
+1. Data description and exploratory analysis
+  1.1 make streamlit figures 
+  1.2 enable filtering of data and respective visualization
+    (e.g. percentage of people with income above certain value that vote in a certain party)
+2. Classification ML task -> predict voting outcomes (political party):
+  2.1 Preparing model and basic modeling
+  2.2 Model evaluation
+  2.3 Model refinement
+  2.4 creating streamlit -> enter inputs to make prediction
