@@ -6,3 +6,5 @@ st.set_page_config(
 )
 
 st.title("Our Super Application")
+
+st.markdown('# Our Better :red[Title]')
