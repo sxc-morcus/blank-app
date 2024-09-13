@@ -26,8 +26,6 @@ color=st.select_slider(
         "indigo",
         "violet",
     ],
+)
 
 st.markdown('My favourite color is :%s[▀]' % color)
-
-    
-)
