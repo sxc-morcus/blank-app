@@ -30,4 +30,6 @@ color=st.select_slider(
 
 st.markdown('My favourite color is :%s[▀]' % color)
 
-st.text_input("Enter a custom message!", "_")
+user_input = st.text_input("Enter a custom message!", "_")
+
+st.write('Customized Message:', user_input)
