@@ -12,3 +12,20 @@ st.title("Our Super Application")
 st.markdown('# Our Better :red[Title]')
 
 st.markdown('Welcome to our first [Streamlit](%s) project' % url)
+
+st.select_slider(
+
+    "Select your favourite color!",
+
+    options = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "indigo",
+        "violet",
+    ],
+
+    
+)
