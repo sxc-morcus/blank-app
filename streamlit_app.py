@@ -13,7 +13,7 @@ st.markdown('# Our Better :red[Title]')
 
 st.markdown('Welcome to our first [Streamlit](%s) project' % url)
 
-st.select_slider(
+color=st.select_slider(
 
     "Select your favourite color!",
 
@@ -26,6 +26,8 @@ st.select_slider(
         "indigo",
         "violet",
     ],
+
+st.markdown('My favourite color is :%s[▀]' % color)
 
     
 )
