@@ -1,5 +1,7 @@
 import streamlit as st
 
+url="https://streamlit.io/"
+
 st.set_page_config(
     page_title='My Super App',
     page_icon=':ice_cream:',
@@ -8,3 +10,5 @@ st.set_page_config(
 st.title("Our Super Application")
 
 st.markdown('# Our Better :red[Title]')
+
+st.markdown('Welcome to our first [Streamlit](%s) project' % url)
