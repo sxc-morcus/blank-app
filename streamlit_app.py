@@ -58,3 +58,4 @@ st.dataframe(df)
 
 st.line_chart(data=df, x= "Income", y= "Party")
 
+st.write(df['Income'].value_counts())
