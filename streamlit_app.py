@@ -21,7 +21,6 @@ def import_csv():
     df = df[:1000]
 
     df['Income'].replace(dic, inplace=True)
-    df['Party'].replace(dic2, inplace=True)
     
     sorted_df= df.sort_values(by="Income")
 
@@ -60,4 +59,6 @@ st.dataframe(df)
 
 st.line_chart(data=df, x= "Income", y= "Party")
 
-st.write(df['Income'].value_counts())
+counts = df.groupby('Income')['Party'].value_counts().unstack(fill_value=0)
+
+st.write(counts)
