@@ -50,3 +50,5 @@ df = import_csv()
 
 st.dataframe(df)
 
+st.line_chart(df)
+
