@@ -57,8 +57,10 @@ df = import_csv()
 
 st.dataframe(df)
 
-st.line_chart(data=df, x= "Income", y= "Party")
+#st.line_chart(data=df, x= "Income", y= "Party")
 
 counts = df.groupby('Income')['Party'].value_counts().unstack(fill_value=0)
+
+st.line_chart(counts)
 
 st.write(counts)
