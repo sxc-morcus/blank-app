@@ -14,6 +14,7 @@ def import_csv():
 
     DATA_FILENAME = Path(__file__).parent/'data/data.csv'
     df = pd.read_csv(DATA_FILENAME)
+    df = df[:1000]
 
     return df
 
