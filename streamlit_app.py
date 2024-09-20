@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 url="https://streamlit.io/"
 
@@ -6,6 +7,14 @@ st.set_page_config(
     page_title='My Super App',
     page_icon=':ice_cream:',
 )
+
+@st.cache_data
+def import_csv():
+
+    DATA_FILENAME = Path(__file__).parent/'data/data.csv'
+    df = pd.read_csv(DATA_FILENAME)
+
+    return df
 
 st.title("Our Super Application")
 
@@ -33,3 +42,6 @@ st.markdown('My favourite color is :%s[▀]' % color)
 user_input = st.text_input("Enter a custom message!", "_")
 
 st.write('Customized Message:', user_input)
+
+st.dataframe(df)
+
