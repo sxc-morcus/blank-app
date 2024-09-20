@@ -9,7 +9,7 @@ st.set_page_config(
     page_icon=':ice_cream:',
 )
 
-@st.cache_data
+
 def import_csv():
 
     DATA_FILENAME = Path(__file__).parent/'data/data.csv'
