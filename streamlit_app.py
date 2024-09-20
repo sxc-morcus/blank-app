@@ -19,7 +19,7 @@ def import_csv():
     df = pd.read_csv(DATA_FILENAME)
     df = df[:1000]
 
-    df.replace({"Income": dic})
+    replace({"Income": dic})
     
     sorted_df= df.sort_values(by="Income")
 
