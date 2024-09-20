@@ -10,6 +10,7 @@ st.set_page_config(
 )
 
 
+@st.cache_data
 def import_csv():
 
     DATA_FILENAME = Path(__file__).parent/'data/data.csv'
