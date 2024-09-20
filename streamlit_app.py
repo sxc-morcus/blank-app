@@ -22,7 +22,7 @@ def import_csv():
     enconding_dict = {element: index for index, element in enumerate(unique_income_intervals)}
     sorted_df['Income'] = sorted_df['Income'].replace(enconding_dict)
     sorted_df['Income'] = sorted_df['Income'].astype(int)
-    sorted_df= df.sort_values(by="Income")    
+    sorted_df= sorted_df.sort_values(by="Income")    
     
 
     return sorted_df
