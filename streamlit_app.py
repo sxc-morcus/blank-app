@@ -17,13 +17,16 @@ def import_csv():
     df = pd.read_csv(DATA_FILENAME)
     df = df[:1000]
 
-    sorted_df= df.sort_values(by="Income")
-    unique_income_intervals = sorted_df['Income'].unique().tolist()
-    enconding_dict = {element: index for index, element in enumerate(unique_income_intervals)}
-    sorted_df['Income'] = sorted_df['Income'].replace(enconding_dict)
-    sorted_df['Income'] = sorted_df['Income'].astype(int)
-    sorted_df= sorted_df.sort_values(by="Income")    
-    
+    def income_to_midpoint(income_str):
+        low, high = income_str.split('-')
+        low = int(low[:-1])  # Remove 'k' and convert to int
+        high = int(high[:-1])  # Remove 'k' and convert to int
+        return (low + high) / 2  # Calculate midpoint
+
+
+    df['Midpoint'] = df['Income'].apply(income_to_midpoint)
+    grouped_data = df.groupby('Party')['Midpoint'].mean().reset_index()
+
 
     return sorted_df
 
@@ -58,5 +61,5 @@ df = import_csv()
 
 st.dataframe(df)
 
-st.line_chart(data=df, x= "Income", y= "Party")
+st.line_chart(grouped_data.set_index('Party'))  
 
