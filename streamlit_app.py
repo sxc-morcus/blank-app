@@ -43,5 +43,7 @@ user_input = st.text_input("Enter a custom message!", "_")
 
 st.write('Customized Message:', user_input)
 
+df = import_csv()
+
 st.dataframe(df)
 
