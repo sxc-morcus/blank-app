@@ -5,6 +5,7 @@ from pathlib import Path
 url="https://streamlit.io/"
 
 dic = {"null": 0, "under $25,000": 1, "$25,001 - $50,000": 2, "$50,000 - $74,999": 3, "$75,000 - $100,000": 4, "$100,001 - $150,000": 5,"over $150,000": 6}
+dic2 = {"Democrat": 0, "Republican": 1}
 
 st.set_page_config(
     page_title='My Super App',
@@ -20,6 +21,7 @@ def import_csv():
     df = df[:1000]
 
     df['Income'].replace(dic, inplace=True)
+    df['Party'].replace(dic2, inplace=True)
     
     sorted_df= df.sort_values(by="Income")
 
