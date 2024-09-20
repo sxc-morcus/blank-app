@@ -17,6 +17,8 @@ def import_csv():
     df = pd.read_csv(DATA_FILENAME)
     df = df[:1000]
 
+    sorted_df= df.sort_values(by="Income")
+
     return df
 
 st.title("Our Super Application")
