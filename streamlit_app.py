@@ -19,7 +19,7 @@ def import_csv():
 
     sorted_df= df.sort_values(by="Income")
 
-    return df
+    return sorted_df
 
 st.title("Our Super Application")
 
