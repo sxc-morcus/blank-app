@@ -21,6 +21,9 @@ def import_csv():
     unique_income_intervals = sorted_df['Income'].unique().tolist()
     enconding_dict = {element: index for index, element in enumerate(unique_income_intervals)}
     sorted_df['Income'] = sorted_df['Income'].replace(enconding_dict)
+    sorted_df['Income'] = sorted_df['Income'].astype(int)
+    sorted_df= df.sort_values(by="Income")    
+    
 
     return sorted_df
 
