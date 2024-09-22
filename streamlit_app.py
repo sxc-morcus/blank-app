@@ -68,8 +68,8 @@ my_xticks = ['one','two','three','four', 'five']
 
 fig = plt.figure()
 
-plt.plot(counts[0])
+#plt.plot(counts[0])
 
-st.pyplot(plt)
+#st.pyplot(plt)
 
 st.write(counts)
