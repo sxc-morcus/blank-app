@@ -66,7 +66,9 @@ counts = df.groupby('Income')['Party'].value_counts().unstack(fill_value=0)
 
 my_xticks = ['one','two','three','four', 'five']
 
+fig = plt.figure()
+plt.plot(counts)
 
-st.pyplot(counts)
+st.pyplot(plt)
 
 st.write(counts)
