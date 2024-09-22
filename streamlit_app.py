@@ -64,13 +64,13 @@ counts = df.groupby('Income')['Party'].value_counts().unstack(fill_value=0)
 
 #st.line_chart(counts, x_label="Annual Income ($ USD)", y_label="# of voters", color=["#0000FF", "#FF0000"])
 
-my_xticks = ['under $25,000','$25,001 - $50,000','$50,000 - $74,999','$75,000 - $100,000', '$100,001 - $150,000', 'over $150,000']
+my_xticks = ['<25','25 - 50','50 - 74','75 - 100', '100 - 150', '>150']
 
 fig = plt.figure()
 
 x = list(range(6))
 
-plt.xlabel('Annual Voter Income (USD $)')
+plt.xlabel('Annual Voter Income (Thousand USD $)')
 plt.ylabel('# Party Members In Dataset')
 plt.title('Party Affiliation By Annual Income $')
 plt.legend()
