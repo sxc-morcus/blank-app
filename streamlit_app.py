@@ -68,7 +68,7 @@ my_xticks = ['one','two','three','four', 'five']
 
 fig = plt.figure()
 
-plt.plot(counts.iloc[1], counts.iloc[0])
+plt.plot(counts.iloc[1], [1:6])
 
 st.pyplot(plt)
 
