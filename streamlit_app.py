@@ -61,6 +61,6 @@ st.dataframe(df)
 
 counts = df.groupby('Income')['Party'].value_counts().unstack(fill_value=0)
 
-st.line_chart(counts, color=["FF0000", "0000FF"])
+st.line_chart(counts, color=["#FF0000", "#0000FF"])
 
 st.write(counts)
