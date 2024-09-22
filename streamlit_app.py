@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
+import matplotlib.pyplot as plt
 
 url="https://streamlit.io/"
 
@@ -61,6 +62,10 @@ st.dataframe(df)
 
 counts = df.groupby('Income')['Party'].value_counts().unstack(fill_value=0)
 
-st.line_chart(counts, x_label="Annual Income ($ USD)", y_label="# of voters", color=["#0000FF", "#FF0000"])
+#st.line_chart(counts, x_label="Annual Income ($ USD)", y_label="# of voters", color=["#0000FF", "#FF0000"])
+
+my_xticks = ['one','two','three','four', 'five']
+plt.xticks(x, my_xticks)
+plt.plot(counts)
 
 st.write(counts)
