@@ -68,7 +68,7 @@ my_xticks = ['one','two','three','four', 'five']
 
 fig = plt.figure()
 
-plt.plot(counts['Democrat'], counts['Income'])
+plt.plot(counts[1], counts[0])
 
 st.pyplot(plt)
 
