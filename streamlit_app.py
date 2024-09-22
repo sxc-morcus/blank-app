@@ -72,4 +72,4 @@ fig = plt.figure()
 
 #st.pyplot(plt)
 
-st.write(counts.iloc[1])
+st.write(counts["Democrat"])
