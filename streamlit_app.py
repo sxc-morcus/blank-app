@@ -67,9 +67,8 @@ counts = df.groupby('Income')['Party'].value_counts().unstack(fill_value=0)
 my_xticks = ['one','two','three','four', 'five']
 
 fig = plt.figure()
-plt.set_color_cycle(['red', 'blue'])
-plt.xticks(x, my_xticks)
-plt.plot(counts)
+
+plt.plot(counts[0])
 
 st.pyplot(plt)
 
