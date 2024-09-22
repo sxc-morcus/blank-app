@@ -75,8 +75,8 @@ plt.ylabel('# Party Members In Dataset')
 plt.title('Party Affiliation By Annual Income $')
 plt.legend()
 plt.xticks(x, my_xticks)
-plt.plot(x, counts["Democrat"], color="blue")
-plt.plot(x, counts["Republican"], color="red")
+plt.plot(x, counts["Democrat"], color="blue", label="Democrat")
+plt.plot(x, counts["Republican"], color="red", label="Republican")
 
 st.pyplot(plt)
 
