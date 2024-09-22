@@ -64,7 +64,7 @@ counts = df.groupby('Income')['Party'].value_counts().unstack(fill_value=0)
 
 #st.line_chart(counts, x_label="Annual Income ($ USD)", y_label="# of voters", color=["#0000FF", "#FF0000"])
 
-my_xticks = ['one','two','three','four', 'five']
+my_xticks = ['one','two','three','four', 'five', 'six']
 
 fig = plt.figure()
 
