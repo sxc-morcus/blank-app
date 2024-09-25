@@ -80,5 +80,6 @@ plt.legend(loc='upper left')
 
 with container:
     st.pyplot(plt)
+    st.pyplot(plt)
 
 st.write(counts)
