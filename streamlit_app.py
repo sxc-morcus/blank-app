@@ -78,7 +78,7 @@ plt.plot(x, counts["Democrat"], color="blue", label="Democrat")
 plt.plot(x, counts["Republican"], color="red", label="Republican")
 plt.legend(loc='upper left')
 
-with container:
+with st.container:
     st.pyplot(plt)
     st.bar_chart(np.random.randn(50, 3))
 
