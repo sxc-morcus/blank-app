@@ -80,6 +80,6 @@ plt.legend(loc='upper left')
 
 with container:
     st.pyplot(plt)
-    st.pyplot(plt)
+    st.bar_chart(np.random.randn(50, 3))
 
 st.write(counts)
